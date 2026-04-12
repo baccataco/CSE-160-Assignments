@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1: Painting</title>
+</head>
+
+<body onload="main()">
+    <h2>Painting - Kailyn Le - kle268@ucsc.edu</h2>
+
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <img src="pika.jpg" alt="Pikachu" style="width: 20%; height: auto;">
+
+    <!-- <button type="button" id="recreate-btn">Recreate</button> -->
+    <button type="button" id="recreate-btn">Recreate</button>
+    <!-- <button type="button" id="log-btn">Log Shapes to Console</button> -->
+
+    <br><br>
+
+    <p id="numdot">XXX</p>
+
+    <div id="clear-canvas">
+        <button type="button" id="clear-btn">Clear Canvas</button>
+    </div>
+
+    <br>
+
+    <div id="drawing-mode">
+        Drawing mode:
+        <button type="button" id="points">Points</button>
+        <button type="button" id="squares">Squares</button>
+        <button type="button" id="triangles">Triangles</button>
+        <button type="button" id="circles">Circles</button>
+        <button id="paintbrush">Paint Brush</button>
+    </div>
+
+    <br>
+
+    <div id="shape-color">
+        <label for="redSlider">Red</label>
+        <input type="range" min="0" max="100" value="100" class="slider" id="redSlider">
+
+        <label for="greenSlider">Green</label>
+        <input type="range" min="0" max="100" value="100" class="slider" id="greenSlider">
+
+        <label for="blueSlider">Blue</label>
+        <input type="range" min="0" max="100" value="100" class="slider" id="blueSlider">
+    </div>
+
+    <br>
+
+    <div id="etc">
+        <label for="shape-size">Shape Size:</label>
+        <input type="range" min="5" max="40" value="1" class="slider" id="shape-size">
+
+        <label for="segment-count">(Circles) Segment Count:</label>
+        <input type="range" min="3" max="30" value="3" class="slider" id="segment-count">
+    </div>
+
+    <script src="..\lib\cuon-utils.js"></script>
+    <script src="..\lib\webgl-debug.js"></script>
+    <script src="..\lib\webgl-utils.js"></script>
+    <script src="Point.js"></script>
+    <script src="Square.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="PaintBrush.js"></script>
+    <script src="asgn1.js"></script>
+</body>
+
+</html>
