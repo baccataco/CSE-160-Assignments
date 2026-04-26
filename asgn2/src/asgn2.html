@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2: Blocky 3D Animal</title>
+</head>
+
+<body onload="main()">
+    <h2>Blocky 3D Animal - Kailyn Le - kle268@ucsc.edu</h2>
+
+    <div>
+        <canvas id="webgl" width="400" height="400">
+            Please use a browser that supports "canvas"
+        </canvas>
+
+        Shift + Click to make it jiggle.
+
+        <div>
+            <span id="fpsCounter"></span>
+        </div>
+    
+        <br>
+
+        <div>
+            <label for="g_globalRotationSlider_x">Camera Angle (up/down):</label>
+            <input type="range" min="-180" max="180" value="0" class="slider" id="g_globalRotationSlider_x">
+
+            <label for="g_globalRotationSlider_y">Camera Angle (left/right):</label>
+            <input type="range" min="-180" max="180" value="0" class="slider" id="g_globalRotationSlider_y">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="moveLeftLeg">Left leg:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveLeftLeg">
+
+            <label for="moveRightLeg">Right leg:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveRightLeg">
+        </div>
+
+        <div style="display: flex; gap: 50px">
+            <div>
+                Animation:
+                <button id="animationLeftLegOn">On</button>
+                <button id="animationLeftLegOff">Off</button>
+            </div>
+
+            <div>
+                Animation:
+                <button id="animationRightLegOn">On</button>
+                <button id="animationRightLegOff">Off</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="moveLeftFoot">Left foot:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveLeftFoot">
+
+            <label for="moveRightFoot">Right foot:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveRightFoot">
+        </div>
+
+        <div style="display: flex; gap: 56px">
+            <div>
+                Animation:
+                <button id="animationLeftFootOn">On</button>
+                <button id="animationLeftFootOff">Off</button>
+            </div>
+
+            <div>
+                Animation:
+                <button id="animationRightFootOn">On</button>
+                <button id="animationRightFootOff">Off</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="moveLeftWing">Left wing (forward/back):</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveLeftWing">
+
+            <label for="moveRightWing">Right wing (forward/back):</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveRightWing">
+
+            
+        </div>
+
+        <div style="display: flex; gap: 160px">
+            <div>
+                Animation:
+                <button id="animationLeftWingOn">On</button>
+                <button id="animationLeftWingOff">Off</button>
+            </div>
+
+            <div>
+                Animation:
+                <button id="animationRightWingOn">On</button>
+                <button id="animationRightWingOff">Off</button>
+            </div>
+        </div>
+
+        <br> <br>
+
+        <div>
+            <label for="moveLeftMiddleWing">Left middle wing:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveLeftMiddleWing">
+
+            <label for="moveRightMiddleWing">Right middle wing:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveRightMiddleWing">
+        </div>
+
+        <div style="display: flex; gap: 110px">
+            <div>
+                Animation:
+                <button id="animationLeftMiddleWingOn">On</button>
+                <button id="animationLeftMiddleWingOff">Off</button>
+            </div>
+
+            <div>
+                Animation:
+                <button id="animationRightMiddleWingOn">On</button>
+                <button id="animationRightMiddleWingOff">Off</button>
+            </div>
+        </div>
+
+        <br> <br>
+
+        <div>
+            <label for="moveLeftTopWing">Left top wing:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveLeftTopWing">
+
+            <label for="moveRightTopWing">Right top wing:</label>
+            <input type="range" min="-90" max="90" value="0" class="slider" id="moveRightTopWing">
+        </div>
+
+        <div style="display: flex; gap: 86px">
+            <div>
+                Animation:
+                <button id="animationLeftTopWingOn">On</button>
+                <button id="animationLeftTopWingOff">Off</button>
+            </div>
+
+            <div>
+                Animation:
+                <button id="animationRightTopWingOn">On</button>
+                <button id="animationRightTopWingOff">Off</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Pyramid.js"></script>
+    <script src="asgn2.js"></script>
+</body>
+
+</html>
