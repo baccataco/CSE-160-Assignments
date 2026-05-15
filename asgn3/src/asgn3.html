@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3: Creating a Virtual World</title>
+</head>
+
+<body onload="main()">
+    <h2>Creating a Virtual World - Kailyn Le - kle268@ucsc.edu</h2>
+
+    <div>
+        <canvas id="webgl" width="400" height="400">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+
+	<span id="fpsCounter"></span>
+
+    <p> Hurry, rush to safety and block yourself in by placing blocks to block the doorway before the zombies get to you!</p>
+    <p> 'f' to place and 'g' to delete blocks</p>
+
+    <br> <br>
+    <p> Block placement not perfect.</p>
+
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="asgn3.js"></script>
+</body>
+
+</html>
