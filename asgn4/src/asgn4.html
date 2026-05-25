@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4: Lighting</title>
+</head>
+
+<body onload="main()">
+    <h2>Lighting - Kailyn Le - kle268@ucsc.edu</h2>
+
+    <div>
+        <canvas id="webgl" width="400" height="400">
+            Please use a browser that supports "canvas"
+        </canvas>
+    </div>
+
+	<span id="fpsCounter"></span>
+
+    <br> <br>
+
+    <div>
+        <label for="lightOn">Light On:</label>
+        <input type="button" id="lightOn" value="ON" onclick="toggleLight()">
+
+        <label for="lightOff">Light Off:</label>
+        <input type="button" id="lightOff" value="OFF" onclick="toggleLight()">
+    </div>
+
+    <br> <br>
+
+    <div>
+        <label for="normalOn">Normal On:</label>
+        <input type="button" id="normalOn" value="ON" onclick="toggleNormal()">
+
+        <label for="normalOff">Normal Off:</label>
+        <input type="button" id="normalOff" value="OFF" onclick="toggleNormal()">
+    </div>
+
+    <br> <br>
+
+    <div>
+        <label for="lightSliderX">Light X:</label>
+        <input type="range" id="lightSliderX" min="-250" max="250" value="0" class="slider" title="Light X position">
+
+        <label for="lightSliderY">Light Y:</label>
+        <input type="range" id="lightSliderY" min="-250" max="250" value="0" class="slider" title="Light Y position">
+
+        <label for="lightSliderZ">Light Z:</label>
+        <input type="range" id="lightSliderZ" min="-250" max="250" value="0" class="slider" title="Light Z position">
+    </div>
+
+    <div>
+        <label for="cube1TranslateX">Translate cube1 X:</label>
+        <input type="range" id="cube1TranslateX" min="-200" max="200" value="10" class="slider">
+
+        <label for="cube1RotateY">Rotate cube1 Y (Degrees):</label>
+        <input type="range" id="cube1RotateY" min="0" max="360" value="0" class="slider">
+    </div>
+
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="OBJMesh.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="asgn4.js"></script>
+</body>
+
+</html>
