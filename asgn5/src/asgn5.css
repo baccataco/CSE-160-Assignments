@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* UI Overlay Container */
+#ui-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    pointer-events: none; /* Let clicks pass through to 3D canvas */
+    z-index: 10;
+}
+
+/* Pokemon-style Info Box */
+.info-panel {
+    background: rgba(0, 0, 0, 0.7);
+    border: 4px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #ffcb05;
+    text-shadow: 2px 2px #3c5aa6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.score-board {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #38b6ff;
+}
+
+/* Interaction Feedback (Toasts) */
+#feedback-msg {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffcb05;
+    text-shadow: 3px 3px #3c5aa6, -1px -1px #000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.show-feedback {
+    opacity: 1 !important;
+    transform: translate(-50%, -60%) scale(1.2) !important;
+}
+
+/* Loading Overlay */
+#loader {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    z-index: 999;
+    transition: opacity 0.5s;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ffcb05;
+    border-top: 5px solid #3c5aa6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}

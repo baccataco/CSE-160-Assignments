@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5: Exploring a High-Level Graphics Library</title>
+    <link rel="stylesheet" href="asgn5.css"/>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/"
+                }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <div>Loading Safari Zone...</div>
+    </div>
+
+    <!-- UI Overlay -->
+    <div id="ui-container">
+        <div class="info-panel">
+            <h1>Safari Zone</h1>
+            <p><strong>Controls:</strong> Left Click to Rotate, Scroll to Zoom, Right Click to Pan.</p>
+            <p><strong>Mission:</strong> Find and click the wandering <strong>PsyDuck</strong> to catch it!</p>
+            <div class="score-board">Caught: <span id="score">0</span></div>
+        </div>
+    </div>
+
+    <!-- Feedback Message -->
+    <div id="feedback-msg">GOTCHA!</div>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+    
+    <script type="module" src="asgn5.js"></script>
+</body>
+
+</html>
