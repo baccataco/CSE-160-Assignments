@@ -290,7 +290,7 @@ function createPlaceholderDuck() {
 // --- CUSTOM 3D MODEL ---
 function loadDuckModel() {
     const loader = new FBXLoader();
-    const url = './src/Psyduck.fbx'; 
+    const url = './Psyduck.fbx'; 
 
     loader.load(url, 
         (object) => {
